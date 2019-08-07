@@ -1,0 +1,16 @@
+<h1>Count Page!</h1>
+<br>
+<a href="{% url 'about' %}"><h1>About!</h1></a>
+
+<a href="{% url 'home' %}">Start Agian</a>
+
+<h1>There are {{ count }} words in a text you have Entered!</h1>
+{{ fullTextBox }}
+<h1>Word Counter!</h1>
+{% for word, counttotal in sortedwords %}
+
+{{ word }} - {{ counttotal }}
+<br>
+
+
+{% endfor %}
